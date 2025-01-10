@@ -541,8 +541,4 @@ init -900 python:
 init -850:
 
     # Default of the Inventory.
-    # The Alpha and Omega.
-    # The Beginning and the End.
-    # ...
-    # (Warwarneverchanges)
     default inventory = Inventory()

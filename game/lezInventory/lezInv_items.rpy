@@ -66,8 +66,10 @@ init -890 python:
         # stack_size - How big this Item's stack can be.
         # Never brought up if stackable is False.
         #
+        # value: The monetary value of the Item. Should be an integer.
+        #
         # What happens upon the definition.
-        def __init__(self, name, desc, image = None, stackable = None, stack_size = 1):
+        def __init__(self, name, desc, image = None, stackable = None, stack_size = 1, value = 0):
 
             # Name of the Item.
             self.name = name
@@ -95,6 +97,9 @@ init -890 python:
             # Default from lezInv_settings if not given.
             else:
                 self.stack_size = lezInv_settings.stack_size
+
+            # Monetary value of the item as int
+            self.value = value
 
             # Check for things that aren't allowed.
             self.check()
